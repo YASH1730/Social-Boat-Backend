@@ -7,6 +7,9 @@ require('./database/db_config')
 app.use(cors())
 app.use(express.static("public"))
 
+app.get('/',(req,res)=>{
+    return res.send('welcome to social boat');
+})
 app.use('/api',require('./routes/routes'))
 
 
