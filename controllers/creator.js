@@ -9,7 +9,7 @@ exports.test = async (req, res) => {
 exports.createFile = async (req, res) => {
   try {
     const { fileName } = req.query;
-    const url = "https://5a21-2401-4900-1c7a-ed05-25be-d4c2-ce22-1461.ngrok-free.app/scripts/";
+    const url = `${process.env.URI}/scripts/`;
     fs.writeFileSync(
       `public/scripts/${fileName}.js`,
       `function Show() {
