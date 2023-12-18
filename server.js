@@ -11,6 +11,7 @@ app.get('/',(req,res)=>{
     return res.send('welcome to social boat');
 })
 app.use('/api',require('./routes/routes'))
+app.use('/webhook',require('./routes/routes'))
 
 
 
